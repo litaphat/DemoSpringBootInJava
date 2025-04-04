@@ -22,6 +22,6 @@ public class HelloController {
 
     @GetMapping("/hellostudent")
     public List<Student> hellostudent() {
-        return List.of(new Student(1L, "Litaphat", "litaphat.ls@gmail.com", LocalDate.of(1996, Month.OCTOBER, 16)));
+        return List.of(new Student(1L, "Litaphat", "litaphat.ls@gmail.com", LocalDate.of(1996, Month.OCTOBER, 16), "Y"));
     }
 }

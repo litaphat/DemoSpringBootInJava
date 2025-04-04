@@ -14,6 +14,7 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dateofbirth;
+    private String active;
 
     @Transient
     private Integer age;
@@ -21,17 +22,19 @@ public class Student {
     public Student() {
     }
 
-    public Student(long id, String name, String email, LocalDate dateofbirth) {
+    public Student(long id, String name, String email, LocalDate dateofbirth, String active) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.dateofbirth = dateofbirth;
+        this.active = active;
     }
 
-    public Student(String name, String email, LocalDate dateofbirth) {
+    public Student(String name, String email, LocalDate dateofbirth, String active) {
         this.name = name;
         this.email = email;
         this.dateofbirth = dateofbirth;
+        this.active = active;
     }
 
     public long getId() {
@@ -54,6 +57,10 @@ public class Student {
         return Period.between(this.dateofbirth, LocalDate.now()).getYears();
     }
 
+    public String getActive() {
+        return active;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -72,6 +79,10 @@ public class Student {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
     }
 
     @Override
